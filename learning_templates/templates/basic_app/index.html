@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends "basic_app/base.html" %}
+{% load custom_filters %}
+
+{% block title %}
+<title>Index</title>
+{% endblock title %}
+
+  {% block body_block %}
+    <h1>Index</h1>
+    <p>navbar is inherited from base.html</p>
+    <h3>{{ text|upper }}</h3>
+    <h3>{{ number|add:"400" }}</h3>
+    <h3>{{ text|customcut:"l" }}</h3>
+  {% endblock %}
